@@ -3,6 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { PatentModule } from './modules/patent/patent.module';
 import { UploadModule } from './modules/tools/upload/upload.module';
 
 @Module({
@@ -15,6 +16,7 @@ import { UploadModule } from './modules/tools/upload/upload.module';
       synchronize: true,
     }),
     UploadModule,
+    PatentModule,
   ],
   controllers: [AppController],
   providers: [AppService],
